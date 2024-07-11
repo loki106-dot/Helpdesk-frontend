@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpdesk</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Helpdesk</h2>
+        <form action="/submit-query" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="orderId">Order ID:</label>
+                <input type="text" id="orderId" name="orderId" placeholder="Enter your Order ID" required>
+            </div>
+            <div class="form-group">
+                <label for="queryType">Type of Query:</label>
+                <select id="queryType" name="queryType" required>
+                    <option value="payment">Payment Related</option>
+                    <option value="delivery">Delivery Related</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="queryDescription">Describe your Query:</label>
+                <textarea id="queryDescription" name="queryDescription" placeholder="Describe your query" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

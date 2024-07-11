@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <ul>
+        <% queries.forEach(query => { %>
+        <li>
+            <p>Name: <%= query.name %></p>
+            <p>Email: <%= query.email %></p>
+            <p>Phone: <%= query.phone %></p>
+            <p>Order ID: <%= query.orderId %></p>
+            <p>Query Type: <%= query.queryType %></p>
+            <p>Description: <%= query.queryDescription %></p>
+            <form action="/edit-query/<%= query._id %>" method="GET">
+                <button type="submit">Edit</button>
+            </form>
+            <form action="/delete-query/<%= query._id %>" method="POST">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

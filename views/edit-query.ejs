@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Query</title>
+</head>
+<body>
+    <h1>Edit Query</h1>
+    <form action="/update-query/<%= query._id %>" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" value="<%= query.name %>"><br>
+        <label>Email:</label>
+        <input type="text" name="email" value="<%= query.email %>"><br>
+        <label>Phone:</label>
+        <input type="text" name="phone" value="<%= query.phone %>"><br>
+        <label>Order ID:</label>
+        <input type="text" name="orderId" value="<%= query.orderId %>"><br>
+        <label>Query Type:</label>
+        <input type="text" name="queryType" value="<%= query.queryType %>"><br>
+        <label>Query Description:</label>
+        <textarea name="queryDescription"><%= query.queryDescription %></textarea><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
